@@ -1,0 +1,865 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{64871772-A956-4472-9793-D03D28FFD2AB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Interior_Design_project</RootNamespace>
+    <AssemblyName>Interior_Design_project</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44340</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about.aspx" />
+    <Content Include="Admin\about.html" />
+    <Content Include="Admin\AdminBooking.aspx" />
+    <Content Include="Admin\AdminContact.aspx" />
+    <Content Include="Admin\blog-home.html" />
+    <Content Include="Admin\blog-single.html" />
+    <Content Include="Admin\contact.html" />
+    <Content Include="Admin\css\animate.min.css" />
+    <Content Include="Admin\css\bootstrap.css" />
+    <Content Include="Admin\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Admin\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Admin\css\bootstrap\bootstrap.css" />
+    <Content Include="Admin\css\font-awesome.min.css" />
+    <Content Include="Admin\css\linearicons.css" />
+    <Content Include="Admin\css\magnific-popup.css" />
+    <Content Include="Admin\css\main.css" />
+    <Content Include="Admin\css\nice-select.css" />
+    <Content Include="Admin\css\owl.carousel.css" />
+    <Content Include="Admin\elements.html" />
+    <Content Include="Admin\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\fonts\Linearicons-Free.svg" />
+    <Content Include="Admin\img\b1.jpg" />
+    <Content Include="Admin\img\b2.jpg" />
+    <Content Include="Admin\img\b3.jpg" />
+    <Content Include="Admin\img\b4.jpg" />
+    <Content Include="Admin\img\banner-bg.jpg" />
+    <Content Include="Admin\img\blog\ads-banner.jpg" />
+    <Content Include="Admin\img\blog\blog-home-banner.jpg" />
+    <Content Include="Admin\img\blog\c1.jpg" />
+    <Content Include="Admin\img\blog\c2.jpg" />
+    <Content Include="Admin\img\blog\c3.jpg" />
+    <Content Include="Admin\img\blog\c4.jpg" />
+    <Content Include="Admin\img\blog\c5.jpg" />
+    <Content Include="Admin\img\blog\c6.jpg" />
+    <Content Include="Admin\img\blog\cat-widget1.jpg" />
+    <Content Include="Admin\img\blog\cat-widget2.jpg" />
+    <Content Include="Admin\img\blog\cat-widget3.jpg" />
+    <Content Include="Admin\img\blog\feature-img1.jpg" />
+    <Content Include="Admin\img\blog\feature-img2.jpg" />
+    <Content Include="Admin\img\blog\feature-img3.jpg" />
+    <Content Include="Admin\img\blog\feature-img4.jpg" />
+    <Content Include="Admin\img\blog\feature-img5.jpg" />
+    <Content Include="Admin\img\blog\next.jpg" />
+    <Content Include="Admin\img\blog\post-img1.jpg" />
+    <Content Include="Admin\img\blog\post-img2.jpg" />
+    <Content Include="Admin\img\blog\pp1.jpg" />
+    <Content Include="Admin\img\blog\pp2.jpg" />
+    <Content Include="Admin\img\blog\pp3.jpg" />
+    <Content Include="Admin\img\blog\pp4.jpg" />
+    <Content Include="Admin\img\blog\prev.jpg" />
+    <Content Include="Admin\img\blog\s-img.jpg" />
+    <Content Include="Admin\img\blog\user-info.png" />
+    <Content Include="Admin\img\call-action-bg.jpg" />
+    <Content Include="Admin\img\elements\a.jpg" />
+    <Content Include="Admin\img\elements\a2.jpg" />
+    <Content Include="Admin\img\elements\d.jpg" />
+    <Content Include="Admin\img\elements\disabled-check.png" />
+    <Content Include="Admin\img\elements\disabled-radio.png" />
+    <Content Include="Admin\img\elements\f1.jpg" />
+    <Content Include="Admin\img\elements\f2.jpg" />
+    <Content Include="Admin\img\elements\f3.jpg" />
+    <Content Include="Admin\img\elements\f4.jpg" />
+    <Content Include="Admin\img\elements\f5.jpg" />
+    <Content Include="Admin\img\elements\f6.jpg" />
+    <Content Include="Admin\img\elements\f7.jpg" />
+    <Content Include="Admin\img\elements\f8.jpg" />
+    <Content Include="Admin\img\elements\g1.jpg" />
+    <Content Include="Admin\img\elements\g2.jpg" />
+    <Content Include="Admin\img\elements\g3.jpg" />
+    <Content Include="Admin\img\elements\g4.jpg" />
+    <Content Include="Admin\img\elements\g5.jpg" />
+    <Content Include="Admin\img\elements\g6.jpg" />
+    <Content Include="Admin\img\elements\g7.jpg" />
+    <Content Include="Admin\img\elements\g8.jpg" />
+    <Content Include="Admin\img\elements\primary-check.png" />
+    <Content Include="Admin\img\elements\primary-radio.png" />
+    <Content Include="Admin\img\elements\success-check.png" />
+    <Content Include="Admin\img\elements\success-radio.png" />
+    <Content Include="Admin\img\elements\t1.jpg" />
+    <Content Include="Admin\img\elements\t2.jpg" />
+    <Content Include="Admin\img\elements\t3.jpg" />
+    <Content Include="Admin\img\elements\t4.jpg" />
+    <Content Include="Admin\img\elements\user1.png" />
+    <Content Include="Admin\img\elements\user2.png" />
+    <Content Include="Admin\img\g1.jpg" />
+    <Content Include="Admin\img\g2.jpg" />
+    <Content Include="Admin\img\g3.jpg" />
+    <Content Include="Admin\img\g4.jpg" />
+    <Content Include="Admin\img\images %281%29.jpg" />
+    <Content Include="Admin\img\images.jpg" />
+    <Content Include="Admin\img\l1.png" />
+    <Content Include="Admin\img\l2.png" />
+    <Content Include="Admin\img\l3.png" />
+    <Content Include="Admin\img\l4.png" />
+    <Content Include="Admin\img\l5.png" />
+    <Content Include="Admin\img\logo.png" />
+    <Content Include="Admin\img\p3.jpg" />
+    <Content Include="Admin\img\play-btn.png" />
+    <Content Include="Admin\img\project-details.jpg" />
+    <Content Include="Admin\img\t1.png" />
+    <Content Include="Admin\img\t2.png" />
+    <Content Include="Admin\img\t3.png" />
+    <Content Include="Admin\img\user.png" />
+    <Content Include="Admin\img\video-bg.jpg" />
+    <Content Include="Admin\img\wall.jpg" />
+    <Content Include="Admin\img\wall1.jpg" />
+    <Content Include="Admin\index.html" />
+    <Content Include="Admin\Interior - Doc\css\font-awesome.min.css" />
+    <Content Include="Admin\Interior - Doc\css\main.css" />
+    <Content Include="Admin\Interior - Doc\css\normalize.min.css" />
+    <Content Include="Admin\Interior - Doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Admin\Interior - Doc\img\logo.png" />
+    <Content Include="Admin\Interior - Doc\index.html" />
+    <Content Include="Admin\Interior - Doc\js\custom.js" />
+    <Content Include="Admin\Interior - Doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Admin\Interior - Doc\js\jquery.nav.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Admin\Interior - Doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="Admin\js\easing.min.js" />
+    <Content Include="Admin\js\hoverIntent.js" />
+    <Content Include="Admin\js\jquery.ajaxchimp.min.js" />
+    <Content Include="Admin\js\jquery.circlechart.js" />
+    <Content Include="Admin\js\jquery.magnific-popup.min.js" />
+    <Content Include="Admin\js\jquery.nice-select.min.js" />
+    <Content Include="Admin\js\mail-script.js" />
+    <Content Include="Admin\js\main.js" />
+    <Content Include="Admin\js\mn-accordion.js" />
+    <Content Include="Admin\js\owl.carousel.min.js" />
+    <Content Include="Admin\js\superfish.min.js" />
+    <Content Include="Admin\js\vendor\bootstrap.min.js" />
+    <Content Include="Admin\js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="Admin\mail.php" />
+    <Content Include="Admin\project-details.html" />
+    <Content Include="Admin\projects.html" />
+    <Content Include="Admin\services.html" />
+    <Content Include="App_Data\registration_db.mdf" />
+    <Content Include="App_Data\registration_db_log.ldf">
+      <DependentUpon>registration_db.mdf</DependentUpon>
+    </Content>
+    <Content Include="booking_form.aspx" />
+    <Content Include="contact.aspx" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap\bootstrap-grid.css" />
+    <Content Include="css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="css\bootstrap\bootstrap.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\linearicons.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\Linearicons-Free.svg" />
+    <Content Include="img\b1.jpg" />
+    <Content Include="img\b2.jpg" />
+    <Content Include="img\b3.jpg" />
+    <Content Include="img\b4.jpg" />
+    <Content Include="img\banner-bg.jpg" />
+    <Content Include="img\blog\ads-banner.jpg" />
+    <Content Include="img\blog\blog-home-banner.jpg" />
+    <Content Include="img\blog\c1.jpg" />
+    <Content Include="img\blog\c2.jpg" />
+    <Content Include="img\blog\c3.jpg" />
+    <Content Include="img\blog\c4.jpg" />
+    <Content Include="img\blog\c5.jpg" />
+    <Content Include="img\blog\c6.jpg" />
+    <Content Include="img\blog\cat-widget1.jpg" />
+    <Content Include="img\blog\cat-widget2.jpg" />
+    <Content Include="img\blog\cat-widget3.jpg" />
+    <Content Include="img\blog\feature-img1.jpg" />
+    <Content Include="img\blog\feature-img2.jpg" />
+    <Content Include="img\blog\feature-img3.jpg" />
+    <Content Include="img\blog\feature-img4.jpg" />
+    <Content Include="img\blog\feature-img5.jpg" />
+    <Content Include="img\blog\next.jpg" />
+    <Content Include="img\blog\post-img1.jpg" />
+    <Content Include="img\blog\post-img2.jpg" />
+    <Content Include="img\blog\pp1.jpg" />
+    <Content Include="img\blog\pp2.jpg" />
+    <Content Include="img\blog\pp3.jpg" />
+    <Content Include="img\blog\pp4.jpg" />
+    <Content Include="img\blog\prev.jpg" />
+    <Content Include="img\blog\s-img.jpg" />
+    <Content Include="img\blog\user-info.png" />
+    <Content Include="img\call-action-bg.jpg" />
+    <Content Include="img\elements\a.jpg" />
+    <Content Include="img\elements\a2.jpg" />
+    <Content Include="img\elements\d.jpg" />
+    <Content Include="img\elements\disabled-check.png" />
+    <Content Include="img\elements\disabled-radio.png" />
+    <Content Include="img\elements\f1.jpg" />
+    <Content Include="img\elements\f2.jpg" />
+    <Content Include="img\elements\f3.jpg" />
+    <Content Include="img\elements\f4.jpg" />
+    <Content Include="img\elements\f5.jpg" />
+    <Content Include="img\elements\f6.jpg" />
+    <Content Include="img\elements\f7.jpg" />
+    <Content Include="img\elements\f8.jpg" />
+    <Content Include="img\elements\g1.jpg" />
+    <Content Include="img\elements\g2.jpg" />
+    <Content Include="img\elements\g3.jpg" />
+    <Content Include="img\elements\g4.jpg" />
+    <Content Include="img\elements\g5.jpg" />
+    <Content Include="img\elements\g6.jpg" />
+    <Content Include="img\elements\g7.jpg" />
+    <Content Include="img\elements\g8.jpg" />
+    <Content Include="img\elements\primary-check.png" />
+    <Content Include="img\elements\primary-radio.png" />
+    <Content Include="img\elements\success-check.png" />
+    <Content Include="img\elements\success-radio.png" />
+    <Content Include="img\elements\t1.jpg" />
+    <Content Include="img\elements\t2.jpg" />
+    <Content Include="img\elements\t3.jpg" />
+    <Content Include="img\elements\t4.jpg" />
+    <Content Include="img\industrial2.jpg" />
+    <Content Include="img\industrial3.jpg" />
+    <Content Include="img\industrial4.jpeg" />
+    <Content Include="img\industrial5.jpg" />
+    <Content Include="img\traditionalimg.jpg" />
+    <Content Include="img\elements\user1.png" />
+    <Content Include="img\elements\user2.png" />
+    <Content Include="img\g1.jpg" />
+    <Content Include="img\g2.jpg" />
+    <Content Include="img\g3.jpg" />
+    <Content Include="img\g4.jpg" />
+    <Content Include="img\images %281%29.jpg" />
+    <Content Include="img\images.jpg" />
+    <Content Include="img\industrial1.jpg" />
+    <Content Include="img\kitchen1.jpg" />
+    <Content Include="img\l1.png" />
+    <Content Include="img\l2.png" />
+    <Content Include="img\l3.png" />
+    <Content Include="img\l4.png" />
+    <Content Include="img\l5.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\p3.jpg" />
+    <Content Include="img\play-btn.png" />
+    <Content Include="img\project-details.jpg" />
+    <Content Include="img\t1.png" />
+    <Content Include="img\t2.png" />
+    <Content Include="img\t3.png" />
+    <Content Include="img\tradtional1.jpg" />
+    <Content Include="img\tradtional2.jpg" />
+    <Content Include="img\tradtional3.jpg" />
+    <Content Include="img\transitional1.jpg" />
+    <Content Include="img\transitional2.jpg" />
+    <Content Include="img\user.png" />
+    <Content Include="img\video-bg.jpg" />
+    <Content Include="img\wall.jpg" />
+    <Content Include="img\wall1.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="Interior - Doc\css\font-awesome.min.css" />
+    <Content Include="Interior - Doc\css\main.css" />
+    <Content Include="Interior - Doc\css\normalize.min.css" />
+    <Content Include="Interior - Doc\fonts\fontawesome-webfont.svg" />
+    <Content Include="Interior - Doc\img\logo.png" />
+    <Content Include="Interior - Doc\index.html" />
+    <Content Include="Interior - Doc\js\custom.js" />
+    <Content Include="Interior - Doc\js\jquery-1.11.0.min.js" />
+    <Content Include="Interior - Doc\js\jquery.nav.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shAutoloader.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushAppleScript.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushAS3.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushBash.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushColdFusion.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushCpp.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushCSharp.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushCss.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushDelphi.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushDiff.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushErlang.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushGroovy.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushJava.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushJavaFX.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushJScript.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushPerl.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushPhp.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushPlain.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushPowerShell.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushPython.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushRuby.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushSass.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushScala.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushSql.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushVb.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shBrushXml.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shCore.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\scripts\shLegacy.js" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCore.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreDefault.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreDjango.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreEclipse.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreEmacs.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreFadeToGrey.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreMDUltra.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreMidnight.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shCoreRDark.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeDefault.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeDjango.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeEclipse.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeEmacs.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeFadeToGrey.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeMDUltra.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeMidnight.css" />
+    <Content Include="Interior - Doc\syntax-highlighter\styles\shThemeRDark.css" />
+    <Content Include="js\easing.min.js" />
+    <Content Include="js\hoverIntent.js" />
+    <Content Include="js\jquery.ajaxchimp.min.js" />
+    <Content Include="js\jquery.circlechart.js" />
+    <Content Include="js\jquery.magnific-popup.min.js" />
+    <Content Include="js\jquery.nice-select.min.js" />
+    <Content Include="js\mail-script.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\mn-accordion.js" />
+    <Content Include="js\owl.carousel.min.js" />
+    <Content Include="js\superfish.min.js" />
+    <Content Include="js\vendor\bootstrap.min.js" />
+    <Content Include="js\vendor\jquery-2.2.4.min.js" />
+    <Content Include="login.aspx" />
+    <Content Include="mail.php" />
+    <Content Include="product1.aspx" />
+    <Content Include="product2.aspx" />
+    <Content Include="product3.aspx" />
+    <Content Include="product4.aspx" />
+    <Content Include="product5.aspx" />
+    <Content Include="product6.aspx" />
+    <Content Include="project-details.aspx" />
+    <Content Include="projects.aspx" />
+    <Content Include="registration.aspx" />
+    <Content Include="services.aspx" />
+    <Content Include="traditional.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminBooking.aspx.cs">
+      <DependentUpon>AdminBooking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBooking.aspx.designer.cs">
+      <DependentUpon>AdminBooking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminContact.aspx.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminContact.aspx.designer.cs">
+      <DependentUpon>AdminContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Site.Master.cs">
+      <DependentUpon>Admin_Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Site.Master.designer.cs">
+      <DependentUpon>Admin_Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="booking_form.aspx.cs">
+      <DependentUpon>booking_form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="booking_form.aspx.designer.cs">
+      <DependentUpon>booking_form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product1.aspx.cs">
+      <DependentUpon>product1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product1.aspx.designer.cs">
+      <DependentUpon>product1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product2.aspx.cs">
+      <DependentUpon>product2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product2.aspx.designer.cs">
+      <DependentUpon>product2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product3.aspx.cs">
+      <DependentUpon>product3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product3.aspx.designer.cs">
+      <DependentUpon>product3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product4.aspx.cs">
+      <DependentUpon>product4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product4.aspx.designer.cs">
+      <DependentUpon>product4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product5.aspx.cs">
+      <DependentUpon>product5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product5.aspx.designer.cs">
+      <DependentUpon>product5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="product6.aspx.cs">
+      <DependentUpon>product6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="product6.aspx.designer.cs">
+      <DependentUpon>product6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="project-details.aspx.cs">
+      <DependentUpon>project-details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="project-details.aspx.designer.cs">
+      <DependentUpon>project-details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="projects.aspx.cs">
+      <DependentUpon>projects.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="projects.aspx.designer.cs">
+      <DependentUpon>projects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="services.aspx.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="services.aspx.designer.cs">
+      <DependentUpon>services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include="css\bootstrap.map" />
+    <Content Include="css\main.map" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Linearicons-Free.eot" />
+    <Content Include="fonts\Linearicons-Free.ttf" />
+    <Content Include="fonts\Linearicons-Free.woff" />
+    <Content Include="fonts\Linearicons-Free.woff2" />
+    <Content Include="img\blog\.DS_Store" />
+    <Content Include="img\img1" />
+    <Content Include="img\wall2" />
+    <Content Include="Interior - Doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Interior - Doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Interior - Doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Interior - Doc\fonts\FontAwesome.otf" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="Admin\Admin_Site.Master" />
+    <Content Include="Admin\.gitattributes" />
+    <Content Include="Admin\css\bootstrap.map" />
+    <Content Include="Admin\css\main.map" />
+    <Content Include="Admin\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Admin\fonts\FontAwesome.otf" />
+    <Content Include="Admin\fonts\Linearicons-Free.eot" />
+    <Content Include="Admin\fonts\Linearicons-Free.ttf" />
+    <Content Include="Admin\fonts\Linearicons-Free.woff" />
+    <Content Include="Admin\fonts\Linearicons-Free.woff2" />
+    <Content Include="Admin\img\blog\.DS_Store" />
+    <Content Include="Admin\img\img1" />
+    <Content Include="Admin\Interior - Doc\fonts\fontawesome-webfont.eot" />
+    <Content Include="Admin\Interior - Doc\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Admin\Interior - Doc\fonts\fontawesome-webfont.woff" />
+    <Content Include="Admin\Interior - Doc\fonts\FontAwesome.otf" />
+    <Content Include="Admin\js\.DS_Store" />
+    <Content Include="Admin\scss\.DS_Store" />
+    <Content Include="Admin\scss\bootstrap.scss" />
+    <Content Include="Admin\scss\bootstrap\.DS_Store" />
+    <Content Include="Admin\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Admin\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Admin\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Admin\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Admin\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Admin\scss\bootstrap\_alert.scss" />
+    <Content Include="Admin\scss\bootstrap\_badge.scss" />
+    <Content Include="Admin\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Admin\scss\bootstrap\_button-group.scss" />
+    <Content Include="Admin\scss\bootstrap\_buttons.scss" />
+    <Content Include="Admin\scss\bootstrap\_card.scss" />
+    <Content Include="Admin\scss\bootstrap\_carousel.scss" />
+    <Content Include="Admin\scss\bootstrap\_close.scss" />
+    <Content Include="Admin\scss\bootstrap\_code.scss" />
+    <Content Include="Admin\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Admin\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Admin\scss\bootstrap\_forms.scss" />
+    <Content Include="Admin\scss\bootstrap\_functions.scss" />
+    <Content Include="Admin\scss\bootstrap\_grid.scss" />
+    <Content Include="Admin\scss\bootstrap\_images.scss" />
+    <Content Include="Admin\scss\bootstrap\_input-group.scss" />
+    <Content Include="Admin\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Admin\scss\bootstrap\_list-group.scss" />
+    <Content Include="Admin\scss\bootstrap\_media.scss" />
+    <Content Include="Admin\scss\bootstrap\_mixins.scss" />
+    <Content Include="Admin\scss\bootstrap\_modal.scss" />
+    <Content Include="Admin\scss\bootstrap\_nav.scss" />
+    <Content Include="Admin\scss\bootstrap\_navbar.scss" />
+    <Content Include="Admin\scss\bootstrap\_pagination.scss" />
+    <Content Include="Admin\scss\bootstrap\_popover.scss" />
+    <Content Include="Admin\scss\bootstrap\_print.scss" />
+    <Content Include="Admin\scss\bootstrap\_progress.scss" />
+    <Content Include="Admin\scss\bootstrap\_reboot.scss" />
+    <Content Include="Admin\scss\bootstrap\_root.scss" />
+    <Content Include="Admin\scss\bootstrap\_tables.scss" />
+    <Content Include="Admin\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Admin\scss\bootstrap\_transitions.scss" />
+    <Content Include="Admin\scss\bootstrap\_type.scss" />
+    <Content Include="Admin\scss\bootstrap\_utilities.scss" />
+    <Content Include="Admin\scss\bootstrap\_variables.scss" />
+    <Content Include="Admin\scss\main.scss" />
+    <Content Include="Admin\scss\theme\.DS_Store" />
+    <Content Include="Admin\scss\theme\_elements.scss" />
+    <Content Include="Admin\scss\theme\_flexbox.scss" />
+    <Content Include="Admin\scss\theme\_footer.scss" />
+    <Content Include="Admin\scss\theme\_header.scss" />
+    <Content Include="Admin\scss\theme\_home.scss" />
+    <Content Include="Admin\scss\theme\_mixins.scss" />
+    <Content Include="Admin\scss\theme\_reset.scss" />
+    <Content Include="Admin\scss\theme\_variables.scss" />
+    <None Include="packages.config" />
+    <Content Include="Site1.Master" />
+    <Content Include="scss\.DS_Store" />
+    <Content Include="scss\bootstrap.scss" />
+    <Content Include="scss\bootstrap\.DS_Store" />
+    <Content Include="scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="scss\bootstrap\bootstrap.scss" />
+    <Content Include="scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="scss\bootstrap\mixins\_float.scss" />
+    <Content Include="scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="scss\bootstrap\mixins\_image.scss" />
+    <Content Include="scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="scss\bootstrap\mixins\_navbar-align.scss" />
+    <Content Include="scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="scss\bootstrap\mixins\_size.scss" />
+    <Content Include="scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="scss\bootstrap\utilities\_align.scss" />
+    <Content Include="scss\bootstrap\utilities\_background.scss" />
+    <Content Include="scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="scss\bootstrap\utilities\_display.scss" />
+    <Content Include="scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="scss\bootstrap\utilities\_float.scss" />
+    <Content Include="scss\bootstrap\utilities\_position.scss" />
+    <Content Include="scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="scss\bootstrap\utilities\_text.scss" />
+    <Content Include="scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="scss\bootstrap\_alert.scss" />
+    <Content Include="scss\bootstrap\_badge.scss" />
+    <Content Include="scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="scss\bootstrap\_button-group.scss" />
+    <Content Include="scss\bootstrap\_buttons.scss" />
+    <Content Include="scss\bootstrap\_card.scss" />
+    <Content Include="scss\bootstrap\_carousel.scss" />
+    <Content Include="scss\bootstrap\_close.scss" />
+    <Content Include="scss\bootstrap\_code.scss" />
+    <Content Include="scss\bootstrap\_custom-forms.scss" />
+    <Content Include="scss\bootstrap\_dropdown.scss" />
+    <Content Include="scss\bootstrap\_forms.scss" />
+    <Content Include="scss\bootstrap\_functions.scss" />
+    <Content Include="scss\bootstrap\_grid.scss" />
+    <Content Include="scss\bootstrap\_images.scss" />
+    <Content Include="scss\bootstrap\_input-group.scss" />
+    <Content Include="scss\bootstrap\_jumbotron.scss" />
+    <Content Include="scss\bootstrap\_list-group.scss" />
+    <Content Include="scss\bootstrap\_media.scss" />
+    <Content Include="scss\bootstrap\_mixins.scss" />
+    <Content Include="scss\bootstrap\_modal.scss" />
+    <Content Include="scss\bootstrap\_nav.scss" />
+    <Content Include="scss\bootstrap\_navbar.scss" />
+    <Content Include="scss\bootstrap\_pagination.scss" />
+    <Content Include="scss\bootstrap\_popover.scss" />
+    <Content Include="scss\bootstrap\_print.scss" />
+    <Content Include="scss\bootstrap\_progress.scss" />
+    <Content Include="scss\bootstrap\_reboot.scss" />
+    <Content Include="scss\bootstrap\_root.scss" />
+    <Content Include="scss\bootstrap\_tables.scss" />
+    <Content Include="scss\bootstrap\_tooltip.scss" />
+    <Content Include="scss\bootstrap\_transitions.scss" />
+    <Content Include="scss\bootstrap\_type.scss" />
+    <Content Include="scss\bootstrap\_utilities.scss" />
+    <Content Include="scss\bootstrap\_variables.scss" />
+    <Content Include="scss\main.scss" />
+    <Content Include="scss\theme\.DS_Store" />
+    <Content Include="scss\theme\_elements.scss" />
+    <Content Include="scss\theme\_flexbox.scss" />
+    <Content Include="scss\theme\_footer.scss" />
+    <Content Include="scss\theme\_header.scss" />
+    <Content Include="scss\theme\_home.scss" />
+    <Content Include="scss\theme\_mixins.scss" />
+    <Content Include="scss\theme\_reset.scss" />
+    <Content Include="scss\theme\_variables.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53948</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
